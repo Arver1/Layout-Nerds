@@ -85,7 +85,6 @@ a {
 	font-size: 16px;
 	font-family: "Roboto", "Arial", sans-serif;
 	position: relative;
-	flex-wrap: wrap;
 }
 .user_block li {
 	position: relative;
@@ -104,15 +103,16 @@ a {
 	left: -40px;
 	top: 7px;
 }
-.slide.hidden {
-	display: none;
+.slider {
+	flex-grow: 1;
+	position: relative;
+	padding-top: 71px;
 }
 .slide {
-	display: flex;
-	flex-direction: column;
+	display: none;
 	min-height: 353px;
 }
-.slide h2 {
+.slide h3 {
 	color: #000000;
 	line-height: 55px;
 	font-weight: 500;
@@ -120,18 +120,33 @@ a {
 	font-family: "Roboto", "Arial", sans-serif;
 	padding-bottom: 26px;
 }
-.slide:nth-of-type(2) h2 {
+.slide_1 h3,
+.slide_1 p {
+	width: 400px;
+}
+.slide_1 img {
+	position: absolute;
+	bottom: 0px;
+	right: 31px;
+}
+.slide_2 h3 {
 	width: 520px;
 }
-.slider {
-	flex-grow: 1;
-	position: relative;
-	padding-top: 71px;
-}
-.slide img {
+.slide_2 img {
 	position: absolute;
 	bottom: 0px;
 	right: 1px;
+}
+.slide_3 h3 {
+	width: 460px;
+}
+.slide_3 p {
+	width: 360px;
+}
+.slide_3 img {
+	position: absolute;
+	bottom: 1px;
+	right: 0px;
 }
 .btn {
 	background-color: #fb565a;
@@ -165,4 +180,42 @@ a {
 .web_studio_products li {
 	width: 300px;
 }
-
+.slide_controls {
+	position: absolute;
+	bottom: 90px;
+	left: 535px;
+}
+.slider input {
+	display: none;
+}
+.slide_controls label {
+	display: inline-block;
+	vertical-align: top;
+	background-color: #ffffff;
+	border-radius: 50%;
+	font-size: 0;
+	line-height: 0;
+	width: 8px;
+	height: 8px;
+	padding: 5px;
+}
+.slide_controls label + label {
+	margin-left: 14px;
+}
+[value="slide_1"]:checked ~ .slide_1,
+[value="slide_2"]:checked ~ .slide_2,
+[value="slide_3"]:checked ~ .slide_3 {
+	display: flex;
+	flex-direction: column;
+}
+[value="slide_1"]:checked ~ .slide_controls .slide_controls_1,
+[value="slide_2"]:checked ~ .slide_controls .slide_controls_2,
+[value="slide_3"]:checked ~ .slide_controls .slide_controls_3 {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #c3c3c3;
+	border-radius: 50%;
+	box-sizing: border-box;
+}

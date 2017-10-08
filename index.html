@@ -24,23 +24,31 @@
   				<li>Корзина</li>
   			</ul>
   			<div class="slider">
-  				<div id="slide_1" class="slide hidden">
+  				<input type="radio" name="slider" value="slide_1" id="slide_1">
+  				<input type="radio" name="slider" value="slide_2" id="slide_2" checked>
+  				<input type="radio" name="slider" value="slide_3" id="slide_3">
+  				<div class="slide slide_1">
   					<img src="img/slide1.png" alt="slide_1" width="698" height="413">
-  					<h2>Долго, дорого, скрупулезно.</h2>
-  					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+  					<h3>Долго, дорого, скрупулезно.</h3>
+  					<p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
   					<a class="btn" href="#">Узнать больше</a>
   				</div>
-  				<div id="slide_2" class="slide">
+  				<div class="slide slide_2">
   					<img src="img/slide2.png" alt="slide_2" width="663" height="430">
-  					<h2>Любим математику как никто другой.</h2>
+  					<h3>Любим математику как никто другой.</h3>
   					<p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
   					<a class="btn" href="#">Узнать больше</a>
   				</div>
-  				<div id="slide_3" class="slide hidden">
+  				<div class="slide slide_3">
   					<img src="img/slide3.png" alt="slide_3" width="759" height="411">
-  					<h2>Только ночь, только хардкор.</h2>
-  					<p>Работаем днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+  					<h3>Только ночь, только хардкор.</h3>
+  					<p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
   					<a class="btn" href="#">Узнать больше</a>
+  				</div>
+  				<div class="slide_controls">
+  					<label for="slide_1"><span class="slide_controls_1">1</span></label>
+  					<label for="slide_2"><span class="slide_controls_2">2</span></label>
+  					<label for="slide_3"><span class="slide_controls_3">3</span></label>
   				</div>
   			</div>
   		</div>
@@ -55,7 +63,7 @@
   						<p>Мир никогда не будет прежним после того как увидит ваш сайт</p>
   						<a class="btn" href="#">Заказать</a>
   					</li>
-  					<li class="applications" width="300" height="146">
+  					<li class="applications">
   						<img src="img/web_studio_products_2.png" alt="product_applications" width="300" height="146">
   						<h3>Приложения</h3>
   						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
@@ -91,6 +99,7 @@
   				</figure>
   			</section>
   			<section class="our_works">
+  				<h2>Наши работы</h2>
   				<ul>
   					<li>
   						<img src="img/our_works_1.png" alt="our_work_1" width="199" height="68">
@@ -108,9 +117,11 @@
   			</section>
   		</div>
   		<section class="map">
+  			<h2>Схема проезда</h2>
   			<img src="img/map_with_pin.jpg" alt="map_with_pin" width="1440" height="416">
   			<section class="contacts">
-  				<b>Nerds design studio<b>
+  				<h3>Наши контакты</h3>
+  				<b>Nerds design studio</b>
   				<span>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д.19/8</span>
   				<span>тел. +7 (812) 275-75-75</span>
   				<a class="btn" href="feedback.html">Напишите нам</a>
@@ -120,6 +131,7 @@
   	<footer>
   		<div class="page_wrapper">
   			<section class="social">
+  				<h2>Наша студия в социальных сетях</h2>
   				<ul>
   					<li><a href="#">vk</a></li>
   					<li><a href="#">facebook</a></li>
