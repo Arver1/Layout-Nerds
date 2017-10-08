@@ -5,6 +5,7 @@
   	<meta name="keywords" content="Arver1, HTML Academy, Nerds">
   	<meta name="description" content="Layout Nerds for the practice">
   	<title>Layout_Nerds</title>
+  	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   	<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -24,9 +25,9 @@
   				<li>Корзина</li>
   			</ul>
   			<div class="slider">
-  				<input type="radio" name="slider" value="slide_1" id="slide_1">
-  				<input type="radio" name="slider" value="slide_2" id="slide_2" checked>
-  				<input type="radio" name="slider" value="slide_3" id="slide_3">
+  				<input class="hidden" type="radio" name="slider" value="slide_1" id="slide_1" checked>
+  				<input class="hidden" type="radio" name="slider" value="slide_2" id="slide_2">
+  				<input class="hidden" type="radio" name="slider" value="slide_3" id="slide_3">
   				<div class="slide slide_1">
   					<img src="img/slide1.png" alt="slide_1" width="698" height="413">
   					<h3>Долго, дорого, скрупулезно.</h3>
@@ -66,41 +67,43 @@
   					<li class="applications">
   						<img src="img/web_studio_products_2.png" alt="product_applications" width="300" height="146">
   						<h3>Приложения</h3>
-  						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
+  						<p>Покорите топ&ndash;10 приложений в AppStore и Google Play</p>
   						<a class="btn" href="#">Заказать</a>
   					</li>
   					<li class="presentations">
   						<img src="img/web_studio_products_3.png" alt="product_presentations" width="300" height="146">
   						<h3>Презентации</h3>
-  						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
+  						<p>Вы даже не подозреваете,<br> насколько вы изумительны!</p>
   						<a class="btn" href="#">Заказать</a>
   					</li>
   				</ul>
   			</section>
   			<section class="about_web_studio">
-  				<h1>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h1>
-  				<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы</p>
-  				<b>Выполняем заказы на разработку:</b>
-  				<ul>
-  					<li>Веб-сайтов любой сложности</li>
-  					<li>Мобильных приложений для iOS и Android</li>
-  					<li>Слайдшоу и видео для корпоративных презентаций</li>
-  				</ul>
-  				<figure>
+  				<div class="about_web_studio_wrapper">
+  					<h1>Мы &mdash; маленькая, но гордая дизайн-студия из Краснодара.</h1>
+  					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+  					<b>Выполняем заказы на разработку:</b>
+  					<ul>
+  						<li>Веб-сайтов любой сложности</li>
+  						<li>Мобильных приложений для iOS и Android</li>
+  						<li>Слайдшоу и видео для корпоративных презентаций</li>
+  					</ul>
+  				</div>
+  				<figure class="holiday_nerds">
   					<img src="img/holiday_nerds.png" alt="holiday_Nerds" width="360" height="208">
-  					<figcaption>
-  						С 2004 года любим точность во всем:
-  						<ul>
-  							<li><b>146%</b> Уровень самоотдачи</li>
-  							<li><b>100%</b> Соблюдение сроков</li>
-  							<li><b>50%</b> Минимальная предоплата</li>
+  					<figcaption class="holiday_nerds_figcap">
+  						<h3>С 2004 года любим точность во всем:</h3>
+  						<ul class="holiday_nerds_list">
+  							<li><b>146<sup>%</sup></b> Уровень самоотдачи</li>
+  							<li><b>100<sup>%</sup></b> Соблюдение сроков</li>
+  							<li><b>50<sup>%</sup></b> Минимальная предоплата</li>
   						</ul>
   					</figcaption>
   				</figure>
   			</section>
   			<section class="our_works">
-  				<h2>Наши работы</h2>
-  				<ul>
+  				<h2 class="hidden">Наши работы</h2>
+  				<ul class="our_works_list">
   					<li>
   						<img src="img/our_works_1.png" alt="our_work_1" width="199" height="68">
   					</li>
@@ -117,10 +120,10 @@
   			</section>
   		</div>
   		<section class="map">
-  			<h2>Схема проезда</h2>
+  			<h2 class="hidden">Схема проезда</h2>
   			<img src="img/map_with_pin.jpg" alt="map_with_pin" width="1440" height="416">
   			<section class="contacts">
-  				<h3>Наши контакты</h3>
+  				<h3 class="hidden">Наши контакты</h3>
   				<b>Nerds design studio</b>
   				<span>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д.19/8</span>
   				<span>тел. +7 (812) 275-75-75</span>
@@ -128,18 +131,20 @@
   			</section>
   		</section>
   	</main>
-  	<footer>
+  	<footer class="main_footer">
   		<div class="page_wrapper">
   			<section class="social">
-  				<h2>Наша студия в социальных сетях</h2>
-  				<ul>
+  				<h2 class="hidden">Наша студия в социальных сетях</h2>
+  				<ul class="social_list">
   					<li><a href="#">vk</a></li>
   					<li><a href="#">facebook</a></li>
   					<li><a href="#">instagram</a></li>
   				</ul>
   			</section>
-  			<b>Давайте дружить, это выгодно!</b>
-  			<strong>Скидка 10% для друзей из социальных сетей</strong>
+  			<span class="footer_wrapper">
+  				<b>Давайте дружить, это выгодно!</b>
+  				<strong>Скидка 10% для друзей из социальных сетей</strong>
+  			</span>
   		</div>
   	</footer>
   </body>
