@@ -54,17 +54,20 @@
             </fieldset>
             <fieldset class="grid">
               <legend>Сетка:</legend>
-              <label>Адаптивная
-                <input type="radio" name="grid" value="adaptive_grid">
+              <label>
+                <input type="radio" name="grid" value="adaptive_grid" checked>
+                <span>Адаптивная</span>
               </label>
-              <label>Фиксированная
+              <label>
                 <input type="radio" name="grid" value="fix_grid">
+                <span>Фиксированная</span>
               </label>
-              <label>Резиновая
+              <label>
                 <input type="radio" name="grid" value="rubber_grid">
+                <span>Резиновая</span>
               </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="features">
               <legend>Особенности:</legend>
               <label>Слайдер
                 <input type="checkbox" name="features" value="slide">
@@ -82,7 +85,7 @@
                 <input type="checkbox" name="features" value="basket">
               </label>
             </fieldset>
-            <input type="submit" value="Показать">
+            <input class="aside_form_submit" type="submit" value="Показать">
           </form>
         </aside>
         <section class="goods">
