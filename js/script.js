@@ -3,6 +3,9 @@
 	var mainMenu = document.querySelector('.main_menu');
 	var logo = document.querySelector('.main_nav > a');
 	var userBlock = document.querySelector('.user_block');
+	var slide1 = document.querySelector('.slide_1');
+	var slide2 = document.querySelector('.slide_2');
+	var slide3 = document.querySelector('.slide_2');
 	if (mainMenu != null) {
 		var mainMenuLinks= mainMenu.querySelectorAll('a');
 		mainMenu.addEventListener ('click', function (evt) {

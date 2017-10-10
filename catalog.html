@@ -9,7 +9,7 @@
   	<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-  	<header class="page_header">
+  	<header class="catalog_header">
   		<div class="page_wrapper">
   			<h2 class="hidden">Дизайн-студия Nerds</h2>
   			<nav class="main_nav">
@@ -24,9 +24,130 @@
   			<ul class="user_block">
   				<li><a href="#">Корзина</a></li>
   			</ul>
+        <h1 class="catalog_h1">Магазин готовых шаблонов</h1>
   		</div>
   	</header>
-    <main>
+    <main class="catalog_main_page">
+      <div class="page_wrapper">
+        <aside class="catalog_main_aside">
+          <form action="#" method="post">
+            <fieldset class="field_price">
+              <legend class="price">Стоимость:</legend>
+              <input type="hidden" name="range" value="0">
+              <div class="range">
+                <div class="scale">
+                </div>
+                <div class="range_btn min">
+                </div>
+                <div class="range_btn max">
+                </div>
+              </div>
+              <div class="range_wrapper">
+                <label>
+                  <span class="text_range_min">От</span>
+                  <input type="text" name="range_min_number" value="0">
+                </label>
+                <label> <span class="text_range_max">До</span>
+                  <input type="text" name="range_max_number" value="15000">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="grid">
+              <legend>Сетка:</legend>
+              <label>
+                <input type="radio" name="grid" value="adaptive_grid" checked>
+                <span>Адаптивная</span>
+              </label>
+              <label>
+                <input type="radio" name="grid" value="fix_grid">
+                <span>Фиксированная</span>
+              </label>
+              <label>
+                <input type="radio" name="grid" value="rubber_grid">
+                <span>Резиновая</span>
+              </label>
+            </fieldset>
+            <fieldset class="features">
+              <legend>Особенности:</legend>
+              <label>
+                <input type="checkbox" name="features" value="slide" checked>
+                <span>Слайдер</span>
+              </label>
+              <label>
+                <input type="checkbox" name="features" value="advantage">
+                <span>Блок преимуществ</span>
+              </label>
+              <label>
+                <input type="checkbox" name="features" value="news" checked>
+                <span>Новости</span>
+              </label>
+              <label>
+                <input type="checkbox" name="features" value="gallery">
+                <span>Галерея</span>
+              </label>
+              <label>
+                <input type="checkbox" name="features" value="basket">
+                <span>Корзина</span>
+              </label>
+            </fieldset>
+            <input class="aside_form_submit" type="submit" value="Показать">
+          </form>
+        </aside>
+        <section class="goods">
+          <h2 class="hidden">Готовые шаблоны</h2>
+          <section class="sort_goods">
+            <h3>Сортировать:</h3>
+            <span class="sort_goods_price">По цене</span>
+            <span class="sort_goods_type">По типу</span>
+            <span class="sort_goods_name">По названию</span>
+            <span class="sort_goods_up"></span>
+            <span class="sort_goods_down"></span>
+          </section>
+          <article class="layout_sedona">
+            <h4 class="hidden">Макет Седона</h4>
+            <a href="#"><img src="img/goods_sedona.jpg" alt="Макет Седона" width="360" height="576"></a>
+          </article>
+          <article class="layout_pink">
+            <h4 class="hidden">Макет Пинк</h4>
+            <a href="#"><img src="img/goods_pink.jpg" alt="Макет Пинк" width="360" height="576"></a>
+          </article>
+          <article class="layout_barbershop_borod">
+            <h4 class="hidden">Макет Барбершоп-Бородинский</h4>
+            <a href="#"><img src="img/goods_barbershop_borod.jpg" alt="Макет Барбершоп-Бородинский" width="360" height="576"></a>
+          </article>
+          <article class="layout_mishka">
+            <h4 class="hidden">Макет Мишка</h4>
+            <a href="#"><img src="img/goods_mishka.jpg" alt="Макет Мишка" width="360" height="576"></a>
+          </article>
+          <article class="layout_aplus">
+            <h4 class="hidden">Макет А+</h4>
+            <a href="#"><img src="img/goods_aplus.jpg" alt="Макет А+" width="360" height="576"></a>
+          </article>
+          <article class="layout_pink">
+            <h4 class="hidden">Макет Кваст</h4>
+            <a href="#"><img src="img/goods_kvast.jpg" alt="Макет Кваст" width="360" height="576"></a>
+          </article>
+          <nav class="catalog_goods_pages">
+            <ul class="catalog_goods_pages_list">
+              <li class="disabled"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li class="next_goods_pages"><a href="#">Следующая</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <section class="map">
+        <h2 class="hidden">Схема проезда</h2>
+        <img src="img/map_with_pin.jpg" alt="map_with_pin" width="1440" height="416">
+        <section class="contacts">
+          <h3 class="hidden">Наши контакты</h3>
+          <b>Nёrds design studio</b>
+          <span>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          <span>тел. +7 (812) 275-75-75</span>
+          <a class="btn" href="feedback.html">Напишите нам</a>
+        </section>
+      </section>
     </main>
     <footer class="main_footer">
       <div class="page_wrapper">
