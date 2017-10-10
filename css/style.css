@@ -738,11 +738,6 @@ a {
 	min-width: 0;
 	width: 80px;
 }
-.goods {
-	width: 760px;
-	height: 800px;
-	background-color: #ca6163;
-}
 .range_wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -796,19 +791,41 @@ a {
 	height: 15px;
 	border-radius: 50%;
 	box-shadow: 
-	0px 0px 0px 4px #b8b8b8,
+	0px 0px 0px 4px #4d4d4d,
 	inset 0px 0px 0px 4px #ffffff;
-}
-.grid span {
-	cursor: pointer;
+	opacity: 0.4;
 }
 [value="adaptive_grid"]:checked + span::before,
 [value="fix_grid"]:checked + span::before,
 [value="rubber_grid"]:checked + span::before {
 	box-shadow: 
-	0px 0px 0px 4px #b8b8b8,
+	0px 0px 0px 4px #4d4d4d,
 	inset 0px 0px 0px 4px #ffffff,
-	inset 0px 0px 0px 8px #b8b8b8;
+	inset 0px 0px 0px 8px #4d4d4d;
+}
+.grid label:hover,
+.features label:hover {
+	cursor: pointer;
+	color: #000000;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+.grid label:hover span::before,
+.features label:hover span::before {
+	opacity: 1.0;
+}
+[name="features"]:disabled + span,
+[value="adaptive_grid"]:disabled + span,
+[value="fix_grid"]:disabled + span,
+[value="rubber_grid"]:disabled + span {
+	opacity: 0.3;
+	color: #283136;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
 }
 .grid label {
 	display: inline-block;
@@ -850,6 +867,22 @@ a {
 .features {
 	margin-bottom: 30px;
 }
+.features span::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -2px;
+	left: 0px;
+	width: 27px;
+	height: 23px;
+	background-image: url(../img/checkbox_icon.png);
+	background-repeat: no-repeat;
+	opacity: 0.4;
+}
+[name="features"]:checked + span::before {
+	background-image: url(../img/checkbox_on_icon.png);
+	opacity: 0.4;
+}
 .aside_form_submit {
 	color: #000000;
 	font-size: 16px;
@@ -864,4 +897,94 @@ a {
 	margin-bottom: 20px;
 	background-color: #eeeeee;
 	cursor: pointer;
+	border-radius: 2px;
+}
+.aside_form_submit:hover {
+	background-color: #dfdfdf;
+}
+.aside_form_submit:active {
+	background-color: #d5d5d5;
+	color: rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 3px #bfbfbf;
+}
+.aside_form_submit:focus {
+	outline: none;
+}
+.goods {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 760px;
+}
+.sort_goods {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 59px;
+	width: 100%;
+	margin-bottom: 95px;
+}
+.sort_goods h3 {
+	color: #000000;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold;
+	font-family: "Roboto", "Arial", sans-serif;
+	text-transform: uppercase;
+	width: 200px;
+	margin-right: 200px;
+}
+.sort_goods_price,
+.sort_goods_type,
+.sort_goods_name {
+	color: #000000;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
+	text-transform: uppercase;
+	padding-top: 2px;
+}
+.sort_goods_price,
+.sort_goods_type {
+	margin-right: 26px;
+}
+.sort_goods_name {
+	margin-right: 49px;
+}
+.sort_goods_up,
+.sort_goods_down {
+	position: relative;
+	width: 9px;
+	height: 2px;
+}
+.sort_goods_up::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -17px;
+	left: 1px;
+	border: 4px solid transparent;
+	border-top: 9px solid #000000;
+}
+.sort_goods_down::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -26px;
+	left: 12px;
+	border: 4px solid transparent;
+	border-top: 9px solid #000000;
+	transform: rotate(180deg);
+	transform-origin: top left;
+}
+.sort_goods_up {
+	margin-right: 16px;
+}
+.goods article {
+	width: 360px;
+	margin-bottom: 69px;
+}
+.goods .layout_mishka,
+.goods .layout_barbershop_borod {
+	margin-bottom: 63px;
 }
