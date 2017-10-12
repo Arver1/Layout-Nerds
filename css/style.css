@@ -315,6 +315,9 @@ a {
 	background-color: #e5a722;
 	box-shadow: inset 0px 3px #ce961f;
 }
+.main_page .page_wrapper {
+	margin-bottom: 81px;
+}
 .products {
 	margin-bottom: 72px;
 }
@@ -332,7 +335,7 @@ a {
 	position: relative;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	margin-bottom: 72px;
 }
 .about_web_studio div {
 	width: 660px;
@@ -657,7 +660,7 @@ a {
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
 }
-/*Каталог*/
+/*----------Каталог----------*/
 .catalog_header {
 	background-color: #eeeeee;
 	max-width: 1440px;
@@ -1119,3 +1122,222 @@ a {
 .catalog_goods_pages_list li:not(.disabled):active a {
 	color: rgba(0,0,0, 0.3);
 }
+/*----------popup----------*/
+.popup_write_us {
+	width: 960px;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 100;
+	background-color: #ffffff;
+	top: -136px;
+	left: calc((100% - 960px)/2);
+	display: none;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 67px 100px 64px 98px;
+	box-shadow: 0px 20px 40px rgba(0,0,0, 0.75);
+}
+.popup_write_us .close {
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+}
+.popup_write_us .close::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 5px;
+	background-color: #fecccd;
+	transform: rotate(45deg);
+	top: 18px;
+	right: -12px;
+}
+.popup_write_us .close::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 26px;
+	height: 5px;
+	background-color: #fecccd;
+	transform: rotate(-45deg);
+	top: 18px;
+	right: -12px;
+}
+.popup_write_us .close:hover::before,
+.popup_write_us .close:hover::after {
+	background-color: #fb565a;
+	cursor: pointer;
+}
+.popup_write_us .close:active::before,
+.popup_write_us .close:active::after {
+	background-color: #ffeeee;
+	cursor: pointer;
+}
+.popup_write_us h4 {
+	width: 400px;
+	flex-grow: 1;
+	color: #000000;
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 500;
+	font-family: "Roboto", "Arial", sans-serif;
+	margin-bottom: 68px;
+}
+.write_us .write_us_submit {
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	font-family: "Roboto", "Arial", sans-serif;
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 14px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	background-color: #fb565a;
+	cursor: pointer;
+	border-radius: 2px;
+	margin-left: 2px;
+	width: 260px;
+	text-align: center;
+	outline: none;
+	padding-left: 0;
+}
+.write_us .write_us_submit:hover {
+	background-color: #e74246;
+	outline: none;
+}
+.write_us .write_us_submit:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #d7373b;
+	box-shadow: inset 0px 3px #c13135;
+	outline: none;
+}
+.aside_form_submit:focus {
+	outline: none;
+}
+.write_us input {
+	width: 360px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 2px;
+	border: 2px solid #d7dcde;
+	box-sizing: border-box;
+	margin-bottom: 62px;
+	padding-left: 13px;
+	color: #444444;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+.write_us [id="write_us_name"]:focus ~ [for="write_us_name"],
+.write_us [id="write_us_name_e_mail"]:focus ~ [for="write_us_name_e_mail"],
+.write_us [id="write_us_textarea"]:focus ~ [for="write_us_textarea"] {
+	transform: translateY(-40px);
+	color: rgba(68,68,68, 1.0);
+}
+.write_us [id="write_us_name"]:focus ~ [for="write_us_name"]::before,
+.write_us [id="write_us_name_e_mail"]:focus ~ [for="write_us_name_e_mail"]::before,
+.write_us [id="write_us_textarea"]:focus ~ [for="write_us_textarea"]::before {
+	transform: translateY(40px) scale(0);
+}
+.write_us input:hover,
+.write_us input:hover ~ label,
+.write_us textarea:hover,
+.write_us textarea:hover ~ label {
+	cursor: pointer;
+	border-color: #b4b9bb;
+}
+.write_us input:focus,
+.write_us textarea:focus {
+	border-color: #000000;
+	outline: none;
+	cursor: default;
+}
+.write_us input:first-of-type {
+	margin-left: 2px;
+}
+.write_us label {
+	position: absolute;
+	color: rgba(68,68,68, 0.5);
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
+	transition: all 0.5s ease-in-out;
+}
+.write_us [for="write_us_name"] {
+	top: 16px;
+	left: 17px;
+}
+.write_us [for="write_us_name_e_mail"] {
+	top: 16px;
+	right: 185px;
+}
+.write_us [for="write_us_textarea"] {
+	top: 125px;
+	left: 17px;
+}
+.write_us [for="write_us_textarea"]::before {
+	content: "Текст письма:";
+	position: absolute;
+	top: -42px;
+	left: -15px;
+	color: #000000;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+	font-family: "Roboto", "Arial", sans-serif;
+	transition: transform 0.5s ease-in-out;
+}
+.write_us [for="write_us_name"]::before {
+	content: "Ваше имя:";
+	position: absolute;
+	top: -42px;
+	left: -15px;
+	color: #000000;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+	font-family: "Roboto", "Arial", sans-serif;
+	transition: transform 0.5s ease-in-out;
+}
+.write_us [for="write_us_name_e_mail"]::before {
+	content: "Ваш e-mail:";
+	position: absolute;
+	top: -42px;
+	left: -15px;
+	color: #000000;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: bold;
+	font-family: "Roboto", "Arial", sans-serif;
+	transition: transform 0.5s ease-in-out;
+}
+.write_us {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+}
+.write_us textarea {
+	border: none;
+	resize: none;
+	border: 2px solid #d7dcde;
+	width: 100%;
+	height: 116px;
+	margin-bottom: 48px;
+	margin-left: 2px;
+	padding-left: 15px;
+	padding-top: 13px;
+	box-sizing: border-box;
+	color: #444444;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+/*----------the end popup----------*/

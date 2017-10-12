@@ -6,6 +6,9 @@
 	var slide1 = document.querySelector('.slide_1');
 	var slide2 = document.querySelector('.slide_2');
 	var slide3 = document.querySelector('.slide_2');
+	var popUp = document.querySelector('.popup_write_us');
+	var linkPopUp = document.querySelector('.contacts a');
+	var close = document.querySelector('.popup_write_us .close');
 	if (mainMenu != null) {
 		var mainMenuLinks= mainMenu.querySelectorAll('a');
 		mainMenu.addEventListener ('click', function (evt) {
@@ -64,6 +67,23 @@
 		}
 		if (localStorage.getItem('mainMenu')) {
 			mainMenuLinks[localStorage.getItem('mainMenu')].classList.add('active_link');
+		}
+	});
+	linkPopUp.addEventListener('click', function(evt) {
+		evt.preventDefault();
+		popUp.style.display = 'flex';
+		document.addEventListener('keydown', function(e) {
+			if (e.keyCode === 27) {
+				popUp.style.display = 'none';
+			}
+		});
+	});
+	close.addEventListener('click', function(evt) {
+		popUp.style.display = 'none';
+	});
+	close.addEventListener('keydown', function(evt) {
+		if (evt.keyCode === 13) {
+			popUp.style.display = 'none';
 		}
 	});
 })();
