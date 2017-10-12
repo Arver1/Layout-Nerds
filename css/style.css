@@ -1206,6 +1206,7 @@ a {
 }
 .write_us .write_us_submit:hover {
 	background-color: #e74246;
+	cursor: pointer;
 	outline: none;
 }
 .write_us .write_us_submit:active {
