@@ -236,6 +236,7 @@ a {
 	width: 8px;
 	height: 8px;
 	padding: 5px;
+	cursor: pointer;
 }
 .slide_controls label + label {
 	margin-left: 14px;
