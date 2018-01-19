@@ -243,9 +243,14 @@ a {
 }
 [value="slide_1"]:checked ~ .slide_1,
 [value="slide_2"]:checked ~ .slide_2,
-[value="slide_3"]:checked ~ .slide_3 {
+[value="slide_3"]:checked ~ .slide_3,
+.active
+ {
 	display: block;
 }
+.slide_1.active ~ .slide_controls .slide_controls_1,
+.slide_2.active ~ .slide_controls .slide_controls_2,
+.slide_3.active ~ .slide_controls .slide_controls_3,
 [value="slide_1"]:checked ~ .slide_controls .slide_controls_1,
 [value="slide_2"]:checked ~ .slide_controls .slide_controls_2,
 [value="slide_3"]:checked ~ .slide_controls .slide_controls_3 {

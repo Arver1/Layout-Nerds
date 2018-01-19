@@ -6,9 +6,10 @@
 	var logo = document.querySelector('.main_nav > a');
 	var userBlock = document.querySelector('.user_block');
 	var userBlockLinks = userBlock.querySelectorAll('a');
-	var slide1 = document.querySelector('.slide_1');
-	var slide2 = document.querySelector('.slide_2');
-	var slide3 = document.querySelector('.slide_2');
+	var slide1 =  document.querySelector('[for="slide_1"]');
+	var slide2 =  document.querySelector('[for="slide_2"]');
+	var slide3 =  document.querySelector('[for="slide_3"]');
+	var slides = document.querySelectorAll('.slide');
 	var popUp = document.querySelector('.popup_write_us');
 	var linkPopUp = document.querySelector('.contacts a');
 	var close = popUp.querySelector('.close');
@@ -79,4 +80,38 @@
 	});
 	
 	// -----end PopUp ----- 
+
+	// -----Slider -----
+	slide1.addEventListener('click', changeSlide);
+	slide2.addEventListener('click', changeSlide);
+	slide3.addEventListener('click', changeSlide);
+	slides[0].classList.add('active');
+	slide_1.checked = false;
+	function changeSlide(evt){
+		evt.preventDefault();
+		Array.prototype.forEach.call(slides,function(item){
+			item.classList.toggle('active',false);
+		});
+		Array.prototype.forEach.call(slides,function(item){
+			if(item.matches('.'+ evt.target.getAttribute('for'))){
+				item.classList.add('active');
+			}
+		});
+	}
+	setInterval(function(){
+		for(var i = 0;i < slides.length; i++){
+			if(slides[i].classList.contains('active')) {
+				slides[i].classList.toggle('active',false);
+				if(i+1 == slides.length) {
+					i=0;
+					slides[i].classList.toggle('active');
+					break;
+				} else {
+					slides[i+1].classList.toggle('active');
+					break;
+				}
+			}
+		}
+	},3000);
+	// -----end Slider -----
 })();
