@@ -1,23 +1,26 @@
 'use strict';
 (function() {
 
-	var mainMenu = document.querySelector('.main_menu');
-	var mainMenuLinks= mainMenu.querySelectorAll('a');
-	var logo = document.querySelector('.main_nav > a');
-	var userBlock = document.querySelector('.user_block');
-	var userBlockLinks = userBlock.querySelectorAll('a');
-	var slide1 =  document.querySelector('[for="slide_1"]');
-	var slide2 =  document.querySelector('[for="slide_2"]');
-	var slide3 =  document.querySelector('[for="slide_3"]');
-	var slides = document.querySelectorAll('.slide');
-	var popUp = document.querySelector('.popup_write_us');
-	var linkPopUp = document.querySelector('.contacts a');
-	var close = popUp.querySelector('.close');
+	const mainMenu = document.querySelector('.main_menu');
+	const mainMenuLinks= mainMenu.querySelectorAll('a');
+	const logo = document.querySelector('.main_nav > a');
+	const userBlock = document.querySelector('.user_block');
+	const userBlockLinks = userBlock.querySelectorAll('a');
+	const slide1 =  document.querySelector('[for="slide_1"]');
+	const slide2 =  document.querySelector('[for="slide_2"]');
+	const slide3 =  document.querySelector('[for="slide_3"]');
+	const slides = document.querySelectorAll('.slide');
+	const popUp = document.querySelector('.popup_write_us');
+	const linkPopUp = document.querySelector('.contacts a');
+	const close = popUp.querySelector('.close');
 
-	var arrLinks = [];
+	const arrLinks = [];
+	if (mainMenuLinks) arrLinks.push(...mainMenuLinks);
+	if (userBlockLinks) arrLinks.push(...userBlockLinks);
+	/*
 	if (mainMenuLinks) arrLinks = arrLinks.concat(Array.prototype.slice.call(mainMenuLinks));
 	if (userBlockLinks) arrLinks = arrLinks.concat(Array.prototype.slice.call(userBlockLinks));
-
+	*/
 	logo.addEventListener('click', function () {
 		localStorage.removeItem('mainMenu');
 		localStorage.removeItem('userBlock');
@@ -49,7 +52,7 @@
 	}
 
 	function changeArrLinks(className, currentLink, localStorageName, array = arrLinks) {
-		for(var i = 0; i < arrLinks.length; i++) {
+		for(let i = 0; i < arrLinks.length; i++) {
 			if (arrLinks[i].classList.contains(className)) {
 				arrLinks[i].classList.remove(className);
 				break;
@@ -99,7 +102,7 @@
 		});
 	}
 	setInterval(function(){
-		for(var i = 0;i < slides.length; i++){
+		for(let i = 0;i < slides.length; i++){
 			if(slides[i].classList.contains('active')) {
 				slides[i].classList.toggle('active',false);
 				if(i+1 == slides.length) {
