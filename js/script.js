@@ -51,15 +51,15 @@
 		});
 	}
 
-	function changeArrLinks(className, currentLink, localStorageName, array = arrLinks) {
-		for(let i = 0; i < arrLinks.length; i++) {
-			if (arrLinks[i].classList.contains(className)) {
-				arrLinks[i].classList.remove(className);
+	function changeArrLinks(className, currentLink, localStorageName, arr = arrLinks) {
+		for(let el of arr) {
+			if (el.classList.contains(className)) {
+				el.classList.remove(className);
 				break;
 			}
 		}
 		currentLink.classList.add('active_link');
-		if (currentLink.getAttribute('href') != '#') localStorage.setItem(localStorageName, arrLinks.indexOf(currentLink));
+		if (currentLink.getAttribute('href') !== '#') localStorage.setItem(localStorageName, arrLinks.indexOf(currentLink));
 	}
 
 	// ----- PopUp ----- 
@@ -105,7 +105,7 @@
 		for(let i = 0;i < slides.length; i++){
 			if(slides[i].classList.contains('active')) {
 				slides[i].classList.toggle('active',false);
-				if(i+1 == slides.length) {
+				if(i+1 === slides.length) {
 					i=0;
 					slides[i].classList.toggle('active');
 					break;
